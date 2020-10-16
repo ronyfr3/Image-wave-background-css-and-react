@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background:url(https://wallpapercave.com/wp/djBJbRN.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* go to image property check its height */
+.wave{
+    position: absolute;
+    width: 100%;
+    height: 143px; 
+    bottom: 0;
+    left: 0;
+    background:url(wave.png);
+    animation: animate 10s linear infinite;  
+}
+.wave::before{
+    content: "";
+    width: 100%;
+    height: 143px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    background:url(wave.png);
+    animation: animate-reverse 10s linear infinite; 
+}
+.wave::after{
+    content: "";
+    width: 100%;
+    height: 143px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    background:url(wave.png);
+    animation-delay: -5s;
+    animation: animate 20s linear infinite; 
+}
+
+/* go to image property check its width */
+@keyframes animate {
+    0%{
+        background-position:0;
+    }
+    100%{
+        background-position:1360px;
+    }
+}
+/* go to image property check its width */
+@keyframes animate-reverse {
+    0%{
+        background-position:1360px;
+    }
+    100%{
+        background-position:0;
+    }
+}
